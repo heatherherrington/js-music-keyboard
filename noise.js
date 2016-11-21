@@ -79,7 +79,7 @@ $(document).ready( function() {
   });
 
   $('body').keydown(function(event) {
-    if (event.key == 'c' && event.which != 32)
+    if (event.key == 'c')
     playC();
   });
 
