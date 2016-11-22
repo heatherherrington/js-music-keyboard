@@ -92,39 +92,12 @@ $(document).ready( function() {
   //   });
   // };
 
-  $('body').keydown(function(event) {
-    // spaceBar();
-    if (event.key == 'c')
-    playC();
-  });
-
-  $('body').keydown(function(event) {
-    if (event.key == 'd')
-    playD();
-  });
-
-  $('body').keydown(function(event) {
-    if (event.key == 'e')
-    playE();
-  });
-
-  $('body').keydown(function(event) {
-    if (event.key == 'f')
-    playF();
-  });
-
-  $('body').keydown(function(event) {
-    if (event.key == 'g')
-    playG();
-  });
-
-  $('body').keydown(function(event) {
-    if (event.key == 'a')
-    playA();
-  });
-
-  $('body').keydown(function(event) {
-    if (event.key == 'b')
-    playB();
-  });
+ $('body').keydown(function(event) {
+   var playClass = event.key;
+   var playId = '#' + playClass + 'Audio';
+   var note = $(playId)[0];
+   note.pause();
+   note.currentTime = 0;
+   note.play();
+ });
 });
